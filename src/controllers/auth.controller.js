@@ -83,9 +83,12 @@ const signUp = async (req, res) => {
     });
 
     // Se manda un status de 200 si se creo el usuario
-    return res.status(200).json();
+    return res.status(200).json({
+      ok:true
+    });
   } catch (e) {
     return res.status(400).json({
+      ok:false,
       msg: 'Hable con el admin'
     });;
   }
@@ -112,10 +115,12 @@ const logout = (req, res) => {
 
     //Devuelve un estado 200
     return res.status(200).json({
+      ok:true,
       message: "Logout successful",
     });
   } catch (error) {
     return res.status(400).json({
+      ok:false,
       msg: 'Hable con el admin'
     });;
   }
