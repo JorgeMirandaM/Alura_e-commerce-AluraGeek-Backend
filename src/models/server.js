@@ -37,7 +37,7 @@ class Server{
         //CORS
         this.app.use(cors({
             credentials:true,
-            origin:['http://127.0.0.1:5500']
+            origin:['http://127.0.0.1:5500','https://jorgemirandam.github.io','https://jorgemirandam.github.io/Alura_e-commerce-AluraGeek-Frontend']
         }));
 
         // Lectura y parseo del body
